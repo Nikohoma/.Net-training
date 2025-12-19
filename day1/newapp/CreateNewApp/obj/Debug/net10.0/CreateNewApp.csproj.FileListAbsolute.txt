@@ -1,0 +1,14 @@
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\bin\Debug\net10.0\CreateNewApp.exe
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\bin\Debug\net10.0\CreateNewApp.deps.json
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\bin\Debug\net10.0\CreateNewApp.runtimeconfig.json
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\bin\Debug\net10.0\CreateNewApp.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\bin\Debug\net10.0\CreateNewApp.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\CreateNewApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\CreateNewApp.AssemblyInfoInputs.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\CreateNewApp.AssemblyInfo.cs
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\CreateNewApp.csproj.CoreCompileInputs.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\CreateNewApp.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\refint\CreateNewApp.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\CreateNewApp.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\CreateNewApp.genruntimeconfig.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\newapp\CreateNewApp\obj\Debug\net10.0\ref\CreateNewApp.dll

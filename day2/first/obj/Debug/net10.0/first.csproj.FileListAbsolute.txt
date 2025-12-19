@@ -1,0 +1,14 @@
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\bin\Debug\net10.0\first.exe
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\bin\Debug\net10.0\first.deps.json
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\bin\Debug\net10.0\first.runtimeconfig.json
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\bin\Debug\net10.0\first.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\bin\Debug\net10.0\first.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\first.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\first.AssemblyInfoInputs.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\first.AssemblyInfo.cs
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\first.csproj.CoreCompileInputs.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\first.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\refint\first.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\first.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\first.genruntimeconfig.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\day2\first\obj\Debug\net10.0\ref\first.dll
