@@ -1,4 +1,6 @@
-﻿public class Student
+﻿using System.ComponentModel;
+
+public class Student
 {
 
     //Property : Wrapper around fields
@@ -6,7 +8,7 @@
     // public string Name{get;set}
     // public string Feedback{get;} //Cannot change the feedback now
 
-    #region Fields
+    #region Fields Declaration
     public int id;
     public string name;
     public int age;
@@ -35,9 +37,6 @@
 
 
 #region Another Class
-/// <summary>
-/// Readable Way of defining Class.
-/// </summary>
 public class StudentV1
 {
 
@@ -49,7 +48,7 @@ public class StudentV1
 
 
     #region Constructor
-    public StudentV1()
+    public StudentV1()  //Params not define so user can make empty objects which would waste memory. Therefore to save memory, we define params inside the constructor like above class example.
     {
         id1 = 0;
         name1 = String.Empty;
@@ -125,10 +124,12 @@ public class Results
     #endregion
     
     #region Constructors
-    public Results()
+    public Results(int CompetitionId, int[] Winners)   //Adding params so that user cannot create empty object
     {
-        CompetitionId = 0;
-        Winners = [];
+        // CompetitionId = 0;
+        // Winners = [];
+        this.CompetitionId = CompetitionId;
+        this.Winners = Winners;
     }
     #endregion
 
@@ -197,43 +198,49 @@ public class PGStudents
 #region Inheritence Classes
 public class Person
 {
-    //Declaration
-    public int id {get; set;}
+    #region Declaration
+    public int id {get; set;}       //another way of declaring, just a wrapper around fields
     public string name {get; set;}
     public int age {get; set;}
+    #endregion
 
-    //Constructor
+    #region Constructor
     public Person(int id, string name, int age)
     {
         this.id = id; this.name=name ; this.age = age;
     }
+    #endregion
 }
 
-public class Man : Person
+public class Man : Person           //Inheriting Person class
 {
-    //Declaration
-    public string Playing {get; set;}
+    #region Declaration
+    public string Playing {get; set;}   //No need to add Person declaration since inheriting
+    #endregion
 
-    //Constructor
+    #region Constructor
     public Man(int id, string name, int age, string Playing) : base(id,name,age)  // Need to define all parameters with the base(parent) params.
     {
         this.Playing = Playing;
     }
+    #endregion
 
     
 }
 
 public class Woman : Person
-{   
+{
 
-    //Declaration
+    #region Declaration
     public string NotPlaying {get; set;}
+    #endregion
 
-    //Constructor
+    #region Constructor
     public Woman(int id, string name, int age, string NotPlaying) : base(id,name,age)
     {
         this.NotPlaying = NotPlaying;
     }
+    #endregion
     
 }
 #endregion
@@ -247,7 +254,7 @@ public class Program
     // Main Function
     static void Main()
     {
-        // #region Instances of Class Student
+        #region Instances of Class Student
         // //Creating Object
         // Student s1 = new Student(1,"Nikhil",24); 
 
@@ -262,7 +269,7 @@ public class Program
         // s2.age1 = 23;
 
         // Console.WriteLine(s2.DisplayInfo());
-        // #endregion
+        #endregion
 
         #region Instances of Class Employee
         Employee e1 = new Employee(); 
@@ -290,7 +297,7 @@ public class Program
         #region Instances of Results
         int[] Winners = {e1.EmpId, e2.EmpId};
 
-        Results res1 = new Results();
+        Results res1 = new Results(c1.CompetitionId, Winners);
         res1.CompetitionId = c1.CompetitionId;
         res1.Winners = Winners;
         res1.DisplayResults();
@@ -314,8 +321,10 @@ public class Program
 
         // Person instance
         Person person = new Person(1,"A",21);
-        string output = program.GetDetails(person);  //Calling the function with the person parameters.
-        Console.WriteLine(output);
+
+        Console.WriteLine(program.GetDetails(person)); //Calling the function with the person parameters.
+        // string output = program.GetDetails(person);  //Calling the function with the person parameters.
+        // Console.WriteLine(output);
 
         //Man instance
         Man man = new Man(2,"M",23,"Football");
@@ -342,9 +351,9 @@ public class Program
             return $"Man Id: {man.id}; Man Name: {man.name}; Man Age: {man.age}; Playing: {man.Playing}";
         }
 
-        if (person is Woman) // if woman object instead of person
+        if (person is Woman woman) // is used for pattern matching: Check if the object is of specific type
         {
-            Woman woman = (Woman) person;
+            // Woman woman = (Woman) person; //Just pass the Woman object while pattern matching
             return $"Woman Id: {woman.id}; Woman Name: {woman.name}; Woman Age: {woman.age}; NotPlaying: {woman.NotPlaying}";
         }
         
