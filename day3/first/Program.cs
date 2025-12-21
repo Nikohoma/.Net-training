@@ -333,7 +333,7 @@ public class Program
     }
 
 
-    #region softFunction for Inheritence: defined for parent class, Common function that can be called for all inheritedely connected classes
+    #region (runtime Polymorphism) Function for Inheritence: defined for parent class, Common function that can be called for all inheritedely connected classes
     public string GetDetails(Person person)
     {
         if (person is Man) // If man object instead of person since all arguments are not same for man and person class
