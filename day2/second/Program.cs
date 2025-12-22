@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
+namespace LoopsAndJumpsQuestions;
 
 public class Program
 {   

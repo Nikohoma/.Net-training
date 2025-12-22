@@ -1,4 +1,6 @@
 ﻿using System;
+namspace ConditionalStatementsQuestions;
+
 
 class Program
 {
