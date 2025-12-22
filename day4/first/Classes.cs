@@ -31,7 +31,7 @@ public class Visitor
         this.name = name;
         this.requirements = requirements;
     }
-    #endregion 
+    #endregion
 
 
 }
@@ -41,7 +41,7 @@ public class Calc
     #region declaration
     int num1 {get; set;}
     int num2 {get; set;}
-    int sum {get;} 
+    int sum {get;}  //we dont want to set the value at runtime. Though value can be set in the constructor
     #endregion
 
     #region Constructor
@@ -49,7 +49,7 @@ public class Calc
     {
         this.num1 = num1; 
         this.num2 = num2;
-        this.sum = num1 + num2; //get values can set the properties only in constructor
+        this.sum = num1 + num2; //get only values can be set only in constructor
         Console.WriteLine($"Sum: {sum}");
     }
     #endregion
@@ -58,6 +58,7 @@ public class Calc
 }
 
 
+// Logs Mechanism
 public class VisitorV2
 {
     #region declaration
@@ -70,7 +71,7 @@ public class VisitorV2
 
     #endregion
 
-    #region Constructors
+    #region Constructor Inheritence using this()
     public VisitorV2()
     {
         LogHistory += $"Object 1 created at {DateTime.Now.ToString()} \n";
@@ -110,7 +111,7 @@ public class Employee
     #region Fields and property declaration
     private int id; //Field
 
-    //Act as a validator. Using getters and setters we can validate the value. 
+    //Act as a validator. Using getters and setters we can validate the value.
     public int ID
     {
         set
@@ -131,7 +132,7 @@ public class Employee
 }
 
 
-#region Tracking all errors.
+#region Tracking all errors and return them at once.
 public class Associates
 {
     #region fields and validations
@@ -193,6 +194,7 @@ public class Associates
 #endregion
 
 
+//Parent Class
 public class Account
 {
     #region declarations
@@ -208,14 +210,14 @@ public class Account
     #endregion
 }
 
+//Child Class
 public class SalesAccount : Account
 {
     #region declarations 
     public int Salesid;
     #endregion
 
-    #region Member Function calling base function
-
+    #region Member Function calling parent function using base
     public string GetSalesAccountDetails()
     {
         string info ="";
