@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/MainClass/">
+    <Project Path="MainClass/first.csproj" />
+  </Folder>
+  <Project Path="MathsLib/MathsLib.csproj" />
+  <Project Path="ScienceLib/ScienceLib.csproj" />
+</Solution>
