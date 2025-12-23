@@ -8,14 +8,28 @@
     ".NETCoreApp,Version=v10.0": {
       "first/1.0.0": {
         "dependencies": {
+          "CommonLib": "1.0.0",
           "MathsLib": "1.0.0",
-          "ScienceLib": "1.0.0"
+          "PaymentLib": "1.0.0",
+          "ScienceLib": "1.0.0",
+          "upi": "1.0.0"
         },
         "runtime": {
           "first.dll": {}
         }
       },
+      "CommonLib/1.0.0": {
+        "runtime": {
+          "CommonLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "MathsLib/1.0.0": {
+        "dependencies": {
+          "CommonLib": "1.0.0"
+        },
         "runtime": {
           "MathsLib.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -23,9 +37,31 @@
           }
         }
       },
+      "PaymentLib/1.0.0": {
+        "runtime": {
+          "PaymentLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "ScienceLib/1.0.0": {
+        "dependencies": {
+          "CommonLib": "1.0.0"
+        },
         "runtime": {
           "ScienceLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "upi/1.0.0": {
+        "dependencies": {
+          "PaymentLib": "1.0.0"
+        },
+        "runtime": {
+          "upi.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -39,12 +75,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CommonLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "MathsLib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
+    "PaymentLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "ScienceLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "upi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

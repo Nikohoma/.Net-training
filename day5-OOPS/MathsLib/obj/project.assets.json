@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "CommonLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/CommonLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonLib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CommonLib/1.0.0": {
+      "type": "project",
+      "path": "../CommonLib/CommonLib.csproj",
+      "msbuildProject": "../CommonLib/CommonLib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "CommonLib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\nikhi\\.nuget\\packages\\": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\CommonLib\\CommonLib.csproj": {
+              "projectPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\CommonLib\\CommonLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

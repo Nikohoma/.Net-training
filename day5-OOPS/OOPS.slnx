@@ -2,6 +2,11 @@
   <Folder Name="/MainClass/">
     <Project Path="MainClass/first.csproj" />
   </Folder>
+  <Folder Name="/UPI/">
+    <Project Path="UPI/upi.csproj" />
+  </Folder>
+  <Project Path="CommonLib/CommonLib.csproj" />
   <Project Path="MathsLib/MathsLib.csproj" />
+  <Project Path="PaymentLib/PaymentLib.csproj" />
   <Project Path="ScienceLib/ScienceLib.csproj" />
 </Solution>

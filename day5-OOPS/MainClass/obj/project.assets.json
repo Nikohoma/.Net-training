@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "CommonLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/CommonLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonLib.dll": {}
+        }
+      },
       "MathsLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "CommonLib": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/MathsLib.dll": {}
         },
@@ -12,34 +25,78 @@
           "bin/placeholder/MathsLib.dll": {}
         }
       },
+      "PaymentLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/PaymentLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaymentLib.dll": {}
+        }
+      },
       "ScienceLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "CommonLib": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ScienceLib.dll": {}
         },
         "runtime": {
           "bin/placeholder/ScienceLib.dll": {}
         }
+      },
+      "upi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "PaymentLib": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/upi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/upi.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "CommonLib/1.0.0": {
+      "type": "project",
+      "path": "../CommonLib/CommonLib.csproj",
+      "msbuildProject": "../CommonLib/CommonLib.csproj"
+    },
     "MathsLib/1.0.0": {
       "type": "project",
       "path": "../MathsLib/MathsLib.csproj",
       "msbuildProject": "../MathsLib/MathsLib.csproj"
     },
+    "PaymentLib/1.0.0": {
+      "type": "project",
+      "path": "../PaymentLib/PaymentLib.csproj",
+      "msbuildProject": "../PaymentLib/PaymentLib.csproj"
+    },
     "ScienceLib/1.0.0": {
       "type": "project",
       "path": "../ScienceLib/ScienceLib.csproj",
       "msbuildProject": "../ScienceLib/ScienceLib.csproj"
+    },
+    "upi/1.0.0": {
+      "type": "project",
+      "path": "../UPI/upi.csproj",
+      "msbuildProject": "../UPI/upi.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "CommonLib >= 1.0.0",
       "MathsLib >= 1.0.0",
-      "ScienceLib >= 1.0.0"
+      "PaymentLib >= 1.0.0",
+      "ScienceLib >= 1.0.0",
+      "upi >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -48,11 +105,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MainClass\\first.csproj",
+      "projectUniqueName": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MainClass\\first.csproj",
       "projectName": "first",
-      "projectPath": "c:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MainClass\\first.csproj",
+      "projectPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MainClass\\first.csproj",
       "packagesPath": "C:\\Users\\nikhi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MainClass\\obj\\",
+      "outputPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MainClass\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikhi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -67,11 +124,20 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "c:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MathsLib\\MathsLib.csproj": {
-              "projectPath": "c:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MathsLib\\MathsLib.csproj"
+            "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\CommonLib\\CommonLib.csproj": {
+              "projectPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\CommonLib\\CommonLib.csproj"
             },
-            "c:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\ScienceLib\\ScienceLib.csproj": {
-              "projectPath": "c:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\ScienceLib\\ScienceLib.csproj"
+            "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MathsLib\\MathsLib.csproj": {
+              "projectPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\MathsLib\\MathsLib.csproj"
+            },
+            "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\PaymentLib\\PaymentLib.csproj": {
+              "projectPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\PaymentLib\\PaymentLib.csproj"
+            },
+            "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\ScienceLib\\ScienceLib.csproj": {
+              "projectPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\ScienceLib\\ScienceLib.csproj"
+            },
+            "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\UPI\\upi.csproj": {
+              "projectPath": "C:\\Users\\nikhi\\OneDrive\\Pictures\\Documents\\csharp\\training\\day5-OOPS\\UPI\\upi.csproj"
             }
           }
         }

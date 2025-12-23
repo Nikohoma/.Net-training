@@ -1,0 +1,12 @@
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\bin\Debug\net10.0\PaymentLib.deps.json
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\bin\Debug\net10.0\PaymentLib.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\bin\Debug\net10.0\PaymentLib.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\PaymentLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\PaymentLib.AssemblyInfoInputs.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\PaymentLib.AssemblyInfo.cs
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\PaymentLib.csproj.CoreCompileInputs.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\PaymentLib.sourcelink.json
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\PaymentLib.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\refint\PaymentLib.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\PaymentLib.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\PaymentLib\obj\Debug\net10.0\ref\PaymentLib.dll

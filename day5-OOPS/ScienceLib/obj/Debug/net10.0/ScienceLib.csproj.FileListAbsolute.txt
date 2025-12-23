@@ -10,3 +10,7 @@ C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\
 C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\obj\Debug\net10.0\refint\ScienceLib.dll
 C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\obj\Debug\net10.0\ScienceLib.pdb
 C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\obj\Debug\net10.0\ref\ScienceLib.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\bin\Debug\net10.0\CommonLib.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\bin\Debug\net10.0\CommonLib.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\obj\Debug\net10.0\ScienceLib.csproj.AssemblyReference.cache
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\ScienceLib\obj\Debug\net10.0\ScienceLib.csproj.Up2Date

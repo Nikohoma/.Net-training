@@ -19,3 +19,9 @@ C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\o
 C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\obj\Debug\net10.0\first.pdb
 C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\obj\Debug\net10.0\first.genruntimeconfig.cache
 C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\obj\Debug\net10.0\ref\first.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\bin\Debug\net10.0\CommonLib.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\bin\Debug\net10.0\CommonLib.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\bin\Debug\net10.0\PaymentLib.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\bin\Debug\net10.0\upi.dll
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\bin\Debug\net10.0\PaymentLib.pdb
+C:\Users\nikhi\OneDrive\Pictures\Documents\csharp\training\day5-OOPS\MainClass\bin\Debug\net10.0\upi.pdb

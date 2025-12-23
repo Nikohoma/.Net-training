@@ -3,6 +3,9 @@
   <ItemGroup>
     <ProjectReference Include="..\MathsLib\MathsLib.csproj" />
     <ProjectReference Include="..\ScienceLib\ScienceLib.csproj" />
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj" />
+    <ProjectReference Include="..\PaymentLib\PaymentLib.csproj" />
+    <ProjectReference Include="..\UPI\upi.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
