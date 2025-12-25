@@ -3,6 +3,7 @@ using CommonLib;
 
 public class Algebra
 {
+    #region Member Methods
     public int Add(int a, int b)
     {
         return a+b;
@@ -12,6 +13,7 @@ public class Algebra
     {
         return a - b;
     }
+    #endregion
 }
 
 public class MathsLibSecurityCheck : LoginAbs

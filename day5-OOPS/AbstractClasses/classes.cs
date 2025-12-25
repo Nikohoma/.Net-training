@@ -11,7 +11,7 @@
         this.Salary = Salary;
         this.Name = Name;
     }
-    #endregion 
+    #endregion
 
     #region Abstract Member Function
     public abstract string CalculateTax(); //Cannot declare body since it is abstract. It must be implemented in child class
@@ -19,8 +19,12 @@
 
 }
 
+
+/// <summary>
+/// Derived Classes
+/// </summary>
 public class IndianEmployee : Employee
-{   
+{
     #region Constructor
     public IndianEmployee(double Salary, string Name) : base(Salary,Name) {}
     #endregion

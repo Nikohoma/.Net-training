@@ -2,8 +2,8 @@
 
 public abstract class LoginAbs
 {
-    #region Abstract Functions
-    public abstract void Login ();
+    #region Abstract Methods
+    public abstract void Login (); //Abstract methods have no body.
 
     public abstract void Logout();
     

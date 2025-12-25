@@ -7,7 +7,7 @@ public abstract class Payment
     #endregion
 
     #region Constructor
-    public Payment(double Amount)
+    protected Payment(double Amount)   // protected can be accessed within class or by derived class.
     {
         this.Amount = Amount;
     }
