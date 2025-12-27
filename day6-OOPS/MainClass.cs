@@ -1,5 +1,6 @@
 using  Interface;
 using MultipleInheritence;
+using ExamScheduler;
 
 public class mainClass
 {
@@ -34,7 +35,7 @@ public class mainClass
         Exam exam = new Exam("Science", examiner.name, examiner.id, "21 Jan");
         exam.ExamInfo();
 
-        ExamSchedule examSchedule = new ExamSchedule(exam.ExamName,exam.name,exam.id,exam.ExamDate,"38-904");
+        ExamSchedule examSchedule = new ExamSchedule(exam.ExamName,exam.name,exam.id,exam.ExamDate,"38-904", "Semester 1");
         examSchedule.semester();
         examSchedule.Examschedule();
 
