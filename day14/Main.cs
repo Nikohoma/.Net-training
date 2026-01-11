@@ -74,6 +74,7 @@ public class MainClass
         #region Events
         Console.WriteLine("\nEvents Outputs:\n");
         Events e = new Events();
+        e.Reached500 += Events.ValueReached500Plus; // Subscribe to the event. Event now knows which method to call when a condition meets. Static Method.
         e.Calcs();
         #endregion
 
