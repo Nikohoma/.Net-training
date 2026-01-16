@@ -190,6 +190,10 @@ public class Program
     #endregion
 
     #region Ques 4
+
+    /// <summary>
+    /// MeditationCenter Data Type Definition
+    /// </summary>
     public class MeditationCenter
     {
         public int MemberId { get; set; } 
@@ -197,28 +201,295 @@ public class Program
         public double Weight { get; set; }
         public double Height { get; set; }
         public string Goal { get; set; }
-        public double BMI { get; }
+        public double BMI { get; set; }
 
-        public MeditationCenter(int memberId, int age, double weight, double height, string goal, double bMI)
+        /// <summary>
+        /// Meditation Center Constructor
+        /// </summary>
+        /// <param name="memberId"></param>
+        /// <param name="age"></param>
+        /// <param name="weight"></param>
+        /// <param name="height"></param>
+        /// <param name="goal"></param>
+        public MeditationCenter(int memberId, int age, double weight, double height, string goal)
         {
             MemberId = memberId;
             Age = age;
             Weight = weight;
             Height = height;
             Goal = goal;
-            BMI = bMI;
+            BMI = 0;
         }
     }
 
+    /// <summary>
+    /// memberList ArrayList to store the details of all the Members.
+    /// </summary>
     public static ArrayList memberList = new ArrayList();
 
-    //public void AddYogaMember(int Memberid, int age, double weight, )
+
+    /// <summary>
+    /// Method to new members to the memberList
+    /// </summary>
+    /// <param name="Memberid"></param>
+    /// <param name="age"></param>
+    /// <param name="weight"></param>
+    /// <param name="height"></param>
+    /// <param name="goal"></param>
+    public void AddYogaMember(int Memberid, int age, double weight, double height, string goal)
+    {
+        MeditationCenter mc = new MeditationCenter(Memberid, age, weight, height, goal);
+        memberList.Add(mc);
+    }
+
+    /// <summary>
+    /// Method to calculate BMI and adding it to the memberList
+    /// </summary>
+    /// <param name="memberId"></param>
+    /// <returns></returns>
+    public double CalculateBMI(int memberId)
+    {
+        bool found = false;
+        double CalculatedBMI = 0;
+        foreach(MeditationCenter m in memberList)
+        {
+            if (m.MemberId == memberId)
+            {
+                CalculatedBMI = (m.Weight) / (m.Height * m.Height);
+                m.BMI = CalculatedBMI;
+                found = true;
+            }
+        }
+
+        if (!found) { Console.WriteLine($"Member ID : {memberId} is not Present. "); }        
+        return Math.Floor(CalculatedBMI);
+    }
+
+    /// <summary>
+    /// Method to calculate Yoga Fee based on goals.
+    /// </summary>
+    /// <param name="memberId"></param>
+    /// <returns></returns>
+    public int CalculateYogaFee(int memberId)
+    {
+        int CalculatedYogaFee = 0; int WeightGain = 2500;
+        foreach (MeditationCenter m in memberList)
+        {
+            if (m.MemberId == memberId)
+            {
+                CalculateBMI(memberId);
+                if (m.Goal == "Weight Loss")
+                {
+                    if (m.BMI >= 25 && m.BMI < 30) { CalculatedYogaFee = 2000; return CalculatedYogaFee; }
+                    if (m.BMI >= 30 && m.BMI < 35) { CalculatedYogaFee = 2000; return CalculatedYogaFee; }
+                    else { CalculatedYogaFee = 2000; return CalculatedYogaFee; }
+
+
+                }
+                else { return WeightGain; }
+            }
+            
+        }
+        Console.WriteLine($"Member ID {memberId} not found. ");
+        return -1;
+    }
 
     #endregion
 
+    #region Ques5
+
+    /// <summary>
+    /// Ecommerce Data Type 
+    /// </summary>
+    public class EcommerceShop
+    {
+        // Properties 
+        public string UserName { get; set; }
+        public double WalletBalance { get; set; }
+        public double TotalPurchaseAmount { get; set; }
+
+        // Constructor
+        public EcommerceShop(string UserName,double WalletBalance, double TotalPurchaseAmount)
+        {
+            this.UserName = UserName; this.WalletBalance = WalletBalance; this.TotalPurchaseAmount = TotalPurchaseAmount;
+        }
+    }
+
+    /// <summary>
+    /// Custom Exception 
+    /// </summary>
+    public class InsufficientWalletBalance : Exception
+    {
+        public InsufficientWalletBalance(string message) : base(message) { } 
+    }
+
+    /// <summary>
+    /// Method to Calculate Payment to make. Throws error if not sufficient balance.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="balance"></param>
+    /// <param name="amount"></param>
+    /// <returns></returns>
+    /// <exception cref="InsufficientWalletBalance"></exception>
+    public EcommerceShop MakePayment(string name, double balance,double amount)
+    {
+        EcommerceShop e1 = new EcommerceShop(name,balance,amount);
+        if (balance < amount) { throw new InsufficientWalletBalance("Insufficient Balance in your digital wallet"); }
+        else { e1.WalletBalance -= amount; }
+        Console.WriteLine($"UserName : {e1.UserName}, Balance: {e1.WalletBalance}");
+        return e1;
+    }
 
 
 
+    #endregion
+
+    #region Ques6
+    public class User
+    {
+        // Properties
+        public string Name { get; set; }
+        public string Password { get; set; }
+        public string ConfirmationPassword { get; set; }
+
+        // Constructor 
+        public User(string Name, string Password, string ConfirmationPassword)
+        {
+            this.Name = Name; this.Password = Password; this.ConfirmationPassword = ConfirmationPassword;
+        }
+    }
+
+
+    /// <summary>
+    /// Custom Exception
+    /// </summary>
+    public class PasswordMismatchException : Exception
+    {
+        public PasswordMismatchException(string msg) : base(msg)
+        {
+            
+        }
+    }
+
+    public User ValidatePassword(string name, string password, string confirmationPassword)
+    {
+        if (password == confirmationPassword)
+        {
+            User u = new User(name, password, confirmationPassword);
+            return u;
+        }
+        else { throw new PasswordMismatchException("Password entered does not match."); }
+    }
+
+
+
+    #endregion
+
+    #region Ques7 
+
+    /// <summary>
+    /// EstimateDetails data type
+    /// </summary>
+    public class EstimateDetails
+    {
+        // Properties
+        public float ConstructionArea { get; set; }
+        public float SiteArea { get; set; }
+
+        //Constructor
+        public EstimateDetails(float ConstructionArea, float SiteArea)
+        {
+            this.ConstructionArea = ConstructionArea; this.SiteArea = SiteArea;
+        }
+
+    }
+
+    /// <summary>
+    /// Custom Exception if ConstructionArea > SiteArea
+    /// </summary>
+    public class ConstructionEstimateException : Exception
+    {
+        public ConstructionEstimateException(string msg) : base(msg)
+        {
+
+        }
+    }
+
+
+    /// <summary>
+    /// Method to Validate Construction.
+    /// </summary>
+    /// <param name="constructionArea"></param>
+    /// <param name="siteArea"></param>
+    /// <returns></returns>
+    /// <exception cref="ConstructionEstimateException"></exception>
+    public EstimateDetails ValidateConstructionEstimate(float constructionArea, float siteArea)
+    {
+        if (constructionArea < siteArea)
+        {
+            EstimateDetails e = new EstimateDetails(constructionArea, siteArea);
+            return e;
+        }
+        else
+        {
+            throw new ConstructionEstimateException("Soryy your construction estimate is not approved.");
+        }
+    }
+
+
+
+    #endregion
+
+    #region Ques 8 
+
+    /// <summary>
+    /// Verified USer Data Type
+    /// </summary>
+    public class VerifiedUser
+    {
+        // Properties
+        public string Name { get; set; }
+        public string PhoneNumber { get; set; }
+
+        // Constructor 
+        public VerifiedUser(string Name ,string PhoneNumber)
+        {
+            this.Name = Name; this.PhoneNumber = PhoneNumber;
+        }
+    }
+
+
+    /// <summary>
+    /// Custom Exception if Invalid Phone Number
+    /// </summary>
+    public class InvalidPhoneNumberException : Exception
+    {
+        public InvalidPhoneNumberException(string msg) : base(msg)
+        {
+
+        }
+    }
+
+
+    /// <summary>
+    /// Method to verify User Phone Number
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="phoneNumber"></param>
+    /// <returns></returns>
+    /// <exception cref="InvalidPhoneNumberException"></exception>
+    public VerifiedUser ValidatePhoneNumber(string name, string phoneNumber)
+    {
+        if (phoneNumber.Length == 10)
+        {
+            VerifiedUser vu = new VerifiedUser(name, phoneNumber);
+            return vu;
+        }
+        else { throw new InvalidPhoneNumberException("Invalid Phone Number"); }
+    }
+
+
+    #endregion
 
 
 }
