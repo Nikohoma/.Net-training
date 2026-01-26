@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>LargestInteger.MainClass</StartupObject>
+    <StartupObject>Question7.MainClass</StartupObject>
   </PropertyGroup>
 
 </Project>
