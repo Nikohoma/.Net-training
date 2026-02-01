@@ -1,4 +1,6 @@
 ﻿using DelegateQuestion;
+using DelegateBasedFunctions;
+using BikeRentalSystem;
 
 namespace MainClass
 {
@@ -50,8 +52,25 @@ namespace MainClass
 
             #endregion
 
+            #region DelegateBasedFunctions
 
+            Console.WriteLine("\n==========================DelegateBasedFunctions Outputs=============================");
+            Console.WriteLine("Notification System Output: ");
+            NotificationSystem ns = new NotificationSystem();
+            ns.ProcessTask("Order #121", msg => Console.WriteLine($"Email Sent : {msg} placed" ));
+            ns.ProcessTask("Order #121", msg => Console.WriteLine($"SMS Sent : {msg} placed" ));
 
+            Console.WriteLine("\nGeneric Data Filter Output: ");
+            GenericDataFilter filter = new GenericDataFilter();
+            List<int> items = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+            var filteredResult = filter.FilterData(items, i => i % 2 == 0);
+            foreach (var f in filteredResult)
+            {
+                Console.Write(f+" ");
+            }
+            #endregion
+
+           
 
 
         }
