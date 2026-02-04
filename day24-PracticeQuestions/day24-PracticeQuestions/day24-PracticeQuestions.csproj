@@ -6,7 +6,7 @@
     <RootNamespace>day24_PracticeQuestions</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MusicStreamingService.MainClass</StartupObject>
+    <StartupObject>MovieTheatreBookingSystem.MainClass</StartupObject>
   </PropertyGroup>
 
 </Project>
