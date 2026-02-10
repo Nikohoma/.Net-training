@@ -3,6 +3,9 @@ using System.Diagnostics;
 using System.Net.NetworkInformation;
 using static System.Net.WebRequestMethods;
 
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace AsyncAwaitExample
 {
     using System;
@@ -164,6 +167,38 @@ namespace AsyncExample4
 
         }
     }
+}
 
 
+namespace AsyncExample5
+{
+    public class Cancellation
+    {
+        public static async Task Cancelling()
+        {
+            var cts = new CancellationTokenSource();
+            cts.CancelAfter(500);
+
+            await LoopMethod();
+        }
+
+        public static async Task LoopMethod()
+        {
+            int count = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                count += 1;
+                await Task.Delay(200);
+            }
+            Console.WriteLine($"Count : {count}");
+        }
+    }
+
+    public class User
+    {
+        public static async Task Main()
+        {
+            await Cancellation.Cancelling();
+        }
+    }
 }
