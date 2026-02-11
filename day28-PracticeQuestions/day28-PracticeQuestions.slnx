@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../FileHandling/FileHandling.csproj" Id="279d3f01-ccde-4042-b23a-fb7343f0a35a" />
   <Project Path="day28-PracticeQuestions.csproj" />
 </Solution>
