@@ -6,7 +6,7 @@
     <RootNamespace>day29_PracticeQuestions</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MainClass</StartupObject>
+    <StartupObject>SurrogateFunction.MainClass</StartupObject>
   </PropertyGroup>
 
 </Project>
