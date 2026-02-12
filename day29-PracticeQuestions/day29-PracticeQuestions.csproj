@@ -6,7 +6,7 @@
     <RootNamespace>day29_PracticeQuestions</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>RemoveDuplicatesUsingHashSet.MainClass</StartupObject>
+    <StartupObject>ArrayElementSum.MainClass</StartupObject>
   </PropertyGroup>
 
 </Project>
