@@ -24,7 +24,7 @@ namespace LargestElementInArray
     {
         public static void Main(string[] args)
         {
-            int[] arr = [1, 2, 3,7, 4, 5];
+            int[] arr = [1, 2, 63,7, 4, 5];
             largestElement le = new largestElement();
             le.LargestElement(arr);
 
