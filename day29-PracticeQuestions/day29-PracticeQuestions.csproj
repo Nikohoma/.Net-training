@@ -6,7 +6,7 @@
     <RootNamespace>day29_PracticeQuestions</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MergeTwoSortedArrays.MainClass</StartupObject>
+    <StartupObject>MainClass</StartupObject>
   </PropertyGroup>
 
 </Project>
