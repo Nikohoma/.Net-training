@@ -6,7 +6,7 @@
     <RootNamespace>day30_ADO</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MergeTwoTicket.MainClass</StartupObject>
+    <StartupObject>LogAnalyzer.MainClass</StartupObject>
   </PropertyGroup>
 
 </Project>

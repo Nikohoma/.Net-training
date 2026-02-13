@@ -26,7 +26,6 @@ class BankStatement
         int n = int.Parse(Console.ReadLine());
         BankStatement bs = new BankStatement();
         var transactions = new List<(string category, int amount)>();
-
         for (int i = 0; i < n; i++)
         {
             Console.Write("Enter category and amount: ");
