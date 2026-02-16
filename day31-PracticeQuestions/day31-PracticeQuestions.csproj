@@ -6,7 +6,7 @@
     <RootNamespace>day31_PracticeQuestions</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TechNova.MainClass</StartupObject>
+    <StartupObject>HealthSync.Utility</StartupObject>
   </PropertyGroup>
 
 </Project>

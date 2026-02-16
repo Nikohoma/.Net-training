@@ -102,10 +102,6 @@
     {
         public Jeans(string id, string name, decimal price, int qty, Size size, Gender gender, string fabricType, string color) : base(id, name, price, qty,size,gender,fabricType,color)
         {
-            Size = size;
-            Gender = gender;
-            FabricType = fabricType;
-            Color = color;
         }
     }
 
@@ -154,7 +150,15 @@
             inventory.AddProduct(l);
             foreach(var i in inventory.GetProducts<Laptop>())
             {
-                Console.WriteLine(i.Id + i.Brand + i.Model + i.Price);
+                Console.WriteLine(i.Id +" "+ i.Brand +" "+ i.Model +" "+ i.Price);
+            }
+            Console.WriteLine("Jeans :");
+            Jeans j = new Jeans("J101", "Regular Fit", 1000, 250, Size.L, Gender.Men, "Linen", "Beige");
+            inventory.AddProduct(j);
+            ;
+            foreach (var i in inventory.GetProducts<Clothing>())
+            {
+                Console.WriteLine(i.Id + " "+i.Name+ " " + i.Price);
             }
         }
     }
