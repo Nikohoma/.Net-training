@@ -6,7 +6,7 @@
     <RootNamespace>day31_PracticeQuestions</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>HealthSync.Utility</StartupObject>
+    <StartupObject>ForgotAwait</StartupObject>
   </PropertyGroup>
 
 </Project>
