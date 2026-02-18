@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../ThreadsQuestions/ThreadsQuestions.csproj" />
+  <Project Path="Testing Questions.csproj" />
+</Solution>
