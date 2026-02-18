@@ -1,5 +1,23 @@
 ﻿using System;
 
+public static class StringExtension
+{
+    public static int WordCount(this string s)
+    {
+        if (s.Length == 0) { return 0; }
+        string[] parts = s.Split(" ");
+        int count = 0;
+        foreach (var p in parts)
+        {
+            if (!string.IsNullOrWhiteSpace(p))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+
 public class MainClass1
 {
     public static void Main(string[] args)
@@ -18,6 +36,7 @@ public class MainClass1
         Console.WriteLine(result4);
         Console.WriteLine(Math.Pow(2, 3)); // 2^3
     }
+    
 }
 
 // Output

@@ -7,7 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
-    <StartupObject>ItTechGenie.M1.Threads.Q1.Program</StartupObject>
+    <StartupObject>MainClass44</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
