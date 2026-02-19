@@ -12,7 +12,7 @@ public delegate void Calculation(int a, int b);
 public delegate void Notify();
 
 
-public class MainClass
+public class MainClass0
 {
     public static event Notify OnCalculation;
     // GENERIC METHOD
