@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ReverseDAL">
+      <HintPath>..\ReverseDAL\bin\Debug\net10.0\ReverseDAL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

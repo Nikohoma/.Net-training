@@ -35,6 +35,15 @@ public class MainClass1
         var result4 = (int)c - 'a'; //106 - 97 = 9 
         Console.WriteLine(result4);
         Console.WriteLine(Math.Pow(2, 3)); // 2^3
+
+        // Conversion to Binary, Hex, Octa
+        int n = 15;
+        var binary = Convert.ToString(n, 2);
+        var octal = Convert.ToString(n, 8);
+        var hex = Convert.ToString(n, 16);
+        Console.WriteLine(binary);
+        Console.WriteLine(octal);
+        Console.WriteLine(hex);
     }
     
 }
