@@ -14,7 +14,7 @@ public delegate void Notify();
 
 public class MainClass0
 {
-    public static event Notify OnCalculation;
+    public static event Notify? OnCalculation;
     // GENERIC METHOD
     public static void Swap<T>(ref T a, ref T b)
     {
@@ -48,8 +48,8 @@ public class MainClass0
         Console.WriteLine("Calculation Triggered.");
     }
 
-    // FUNC EXAMPLE
-    public static void Filter(int[] input, Func<int, bool> isEven)
+    // FUNC/Predicate/Action EXAMPLE
+    public static void Filter(int[] input, Func<int, bool> isEven)  // Predicate
     {
         var result = input.Where(isEven);
         foreach (var r in result)
@@ -57,6 +57,11 @@ public class MainClass0
             Console.Write(r + " ");
         }
     }
+
+    static Func<int, int, int> AddFunc = (a, b) => a + b;
+    static Predicate<int> MoreThan1000 = (a) => (a > 1000);
+    static Action Greet = () => Console.WriteLine("Good Night");
+    static Action<string> Greet1 = (name) => Console.WriteLine("Good Night " + name);
 
     public static bool Filter2(int input, Predicate<int> condition)
     {
@@ -95,15 +100,24 @@ public class MainClass0
         calc -= Add;  // Remove add from invocation list 
         calc += Subtract; // Add Subtract to invocation list
         calc(2, 3);
+
+        // Action returns void ; Predicate returns bool ; Func can return any data type
         Console.WriteLine("\nPredicate Output");
         int[] nums = new int[] { 1, 2, 3, 4, 5, 6, 7 };
         Filter(nums, x => x % 2 == 0);
+        MoreThan1000(1200);
+
         Console.WriteLine("\nFunc");
         var output = Filter2(1, x => x > 0);
+        var output2 = AddFunc(2, 3);
         Console.WriteLine(output);
+        Console.WriteLine(output2);
+
         Console.WriteLine("\nAction");
         ActionEx(2, n => Console.WriteLine($"Number : {n}"));
         ActionEx1(2, x => Console.WriteLine($"Square : {x * x}"));
+        Greet();
+        Greet1("Nikhil");
 
     }
 }

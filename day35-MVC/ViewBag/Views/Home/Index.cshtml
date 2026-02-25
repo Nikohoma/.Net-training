@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";  // Dictionary 
+    ViewData["Heading"] = "New Heading";
+    ViewData["Heading"] += " Another Heading";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <h2>@ViewData["Heading"]</h2>
+    <h3>@ViewBag.Subheading</h3>
+
+    @foreach (var c in ViewBag.Countries.Split(",")) // Accessing in the client side (html) from server side (controller)
+    {
+        <p>@c</p>
+    }
+
+    @foreach (var n in ViewBag.NewBag)
+        {
+            <p>@n</p>
+        }
+    
+</div>

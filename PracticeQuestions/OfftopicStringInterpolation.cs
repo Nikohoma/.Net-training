@@ -15,7 +15,7 @@ public class MainClass2
 
 // Output
 //1.232346E+004
-//? 12,323.46
+//? 12,323.46   Local Currency Symbol
 //12323.46
 //12,323.46
 //12,323.5

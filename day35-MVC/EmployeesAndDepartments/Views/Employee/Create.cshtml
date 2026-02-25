@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h2 style="text-align:center;">Add Employee</h2>
+
+<div style="width:400px; margin:20px auto; padding:20px; border:1px solid #ccc; border-radius:8px; box-shadow:0 0 10px #ddd;">
+
+    <form asp-action="Create" asp-controller="Employee" method="post">
+
+        <div style="margin-bottom:15px;">
+            <label>Full Name</label><br />
+            <input type="text" name="FullName" style="width:100%; padding:8px;" />
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label>Email</label><br />
+            <input type="email" name="Email" style="width:100%; padding:8px;" />
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label>Salary</label><br />
+            <input type="number" name="Salary" style="width:100%; padding:8px;" />
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label>Department</label><br />
+            <select name="DepartmentId" style="width:100%; padding:8px;">
+                <option value="">-- Select Department --</option>
+                <option value="1">HR</option>
+                <option value="2">IT</option>
+                <option value="3">Finance</option>
+                <option value="4">Marketing</option>
+            </select>
+        </div>
+
+        <div style="text-align:center;">
+            <button type="submit" style="padding:8px 20px;">Save</button>
+            <button type="reset" style="padding:8px 20px;">Clear</button>
+        </div>
+
+    </form>
+
+</div>

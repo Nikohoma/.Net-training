@@ -8,7 +8,7 @@ namespace WebApplication1.Controllers
     {
         public IActionResult Index()
         {
-            return View("../StudentViews/AddStudent");
+            return View("../StudentViews/GetStudents");
         }
 
         public IActionResult AddStudent()
@@ -27,5 +27,12 @@ namespace WebApplication1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult GetStudents()
+        {
+            return View();
+        }
+
+        
     }
 }
