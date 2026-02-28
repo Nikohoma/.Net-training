@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h2>Status</h2>
+
+<p id="msg"></p>
+
+<script>
+        const xhr = new XMLHttpRequest();
+        const url = 'https://jsonplaceholder.typicode.com/posts/1'; // Example API endpoint
+
+        // 1. Set up the response handler (onload is preferred over onreadystatechange)
+        xhr.onload = function () {
+          // Check if the request was successful (status code 200-299)
+          if (xhr.status >= 200 && xhr.status < 300) {
+              let data = JSON.parse(xhr.responseText);
+            document.getElementById("msg").innerHTML = 
+            "TITLE : "+data.title+"<br>"+"Body : "+ data.body;
+          } 
+          else {
+            document.getElementById("msg").innerHTML = 'Error: ',xhr.statusText;
+
+          }
+        };
+
+        // 2. Handle network errors
+        xhr.onerror = function () {
+          console.error('Network Error');
+        };
+
+        // 3. Initialize the request
+        xhr.open('GET', url, true); // Method, URL, asynchronous (true)
+
+        // 4. Send the request
+        xhr.send(); // No body for a GET request
+</script>

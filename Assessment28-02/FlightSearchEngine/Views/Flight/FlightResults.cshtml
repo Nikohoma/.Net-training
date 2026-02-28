@@ -1,0 +1,27 @@
+﻿@model List<FlightSearchEngine.Models.FlightResult>
+
+<h2>Flight Results</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Flight Name</th>
+            <th>Flight Type</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Total Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flight in Model)
+        {
+            <tr>
+                <td>@flight.FlightName</td>
+                <td>@flight.FlightType</td>
+                <td>@flight.Source</td>
+                <td>@flight.Destination</td>
+                <td>@flight.TotalCost</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h2>AJAX Example</h2>
+
+<input type="text" id="nameInput" placeholder="Enter your name" />
+<button id="btnGreet">Greet Me</button>
+
+<p id="result"></p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    document.getElementById("btnGreet").addEventListener("click", function () {
+
+        var name = document.getElementById("nameInput").value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/Home/GetGreeting", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.onload = function () {
+            document.getElementById("result").innerHTML = xhr.responseText;
+        };
+
+        xhr.send("name=" + name);
+    });
+</script>

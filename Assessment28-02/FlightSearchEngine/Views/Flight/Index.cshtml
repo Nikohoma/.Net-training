@@ -1,0 +1,85 @@
+﻿@model FlightSearchEngine.Models.SearchViewModel
+
+@{
+    ViewData["Title"] = "Find Your Perfect Flight";
+}
+
+<div class="container mt-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">Flight Search Engine</h1>
+        <p class="text-muted">Book flights and hotels at the best prices</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+
+                    <form method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                        <!-- Source -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">From</label>
+                            <select asp-for="Source"
+                                    asp-items="Model.SourceList"
+                                    class="form-select form-select-lg">
+                                <option value="">Select departure city</option>
+                            </select>
+                            <span asp-validation-for="Source" class="text-danger"></span>
+                        </div>
+
+                        <!-- Destination -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">To</label>
+                            <select asp-for="Destination"
+                                    asp-items="Model.DestinationList"
+                                    class="form-select form-select-lg">
+                                <option value="">Select destination city</option>
+                            </select>
+                            <span asp-validation-for="Destination" class="text-danger"></span>
+                        </div>
+
+                        <!-- Persons -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Passengers</label>
+                            <input asp-for="NumberOfPersons"
+                                   type="number"
+                                   class="form-control form-control-lg"
+                                   min="1"
+                                   max="10"
+                                   placeholder="Enter number of passengers" />
+                            <span asp-validation-for="NumberOfPersons" class="text-danger"></span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-grid gap-2">
+                            <button type="submit"
+                                    formaction="@Url.Action("SearchFlights", "Flight")"
+                                    class="btn btn-primary btn-lg rounded-pill">
+                                    Search Flights
+                            </button>
+
+                            <button type="submit"
+                                    formaction="@Url.Action("SearchFlightsWithHotels", "Flight")"
+                                    class="btn btn-outline-warning btn-lg rounded-pill">
+                                    Search Flights With Hotels
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
